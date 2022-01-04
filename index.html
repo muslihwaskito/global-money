@@ -4,7 +4,7 @@
     <title>Global Money :: Earn up to 30%* interest on your stablecoins</title>
     <meta data-n-head="1" charset="utf-8">
     <meta data-n-head="1" data-hid="description" name="description" content="">
-    <link data-n-head="1" rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link data-n-head="1" rel="icon" type="image/x-icon" href="_nuxt/img/logo_svg.svg">
     <link data-n-head="1" rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css">
     <link data-n-head="1" rel="stylesheet"
@@ -28,6 +28,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <style type="text/css">
+        html {
+            scroll-behavior: smooth;
+        }
         .__nuxt-error-page {
             padding: 1rem;
             background: #f7f8fb;
@@ -1787,7 +1790,7 @@
         }
 
         .investors-block ul {
-            display: none;
+            display: flex;
             justify-content: space-between
         }
 
@@ -3728,7 +3731,7 @@
                             <li><a href="#block-01">About Us</a></li>
                             <li><a href="#block-02">How it works</a></li>
                             <li><a href="#block-03">APY Levels</a></li>
-                            <li><a href="https://orion-money.medium.com/orion-money-litepaper-release-7e98bb3acb6f"
+                            <li><a href="#"
                                     target="_blank" rel="noreferrer noopener">Lite Paper</a></li>
                         </ul>
                     </div>
@@ -5235,10 +5238,10 @@
                                     <li><a href="https://t.me/Orion_Money" target="_blank"
                                             rel="noreferrer noopener"><img src="https://orion.money/img/icon-telegram.svg" width="28"
                                                 height="28"></a></li>
-                                    <li><a href="https://mobile.twitter.com/G_Money_Finance" target="_blank"
+                                    <li><a href="https://twitter.com/G_Money_Finance/" target="_blank"
                                             rel="noreferrer noopener"><img src="https://orion.money/img/icon-bird.svg" width="28"
                                                 height="28"></a></li>
-                                    <li><a href="https://medium.com/@mglobal729" target="_blank"
+                                    <li><a href="https://medium.com/@Global_Money" target="_blank"
                                             rel="noreferrer noopener"><img src="https://orion.money/img/icon-medium.svg" width="28"
                                                 height="28"></a></li>
                                 </ul>
@@ -5392,7 +5395,7 @@
         autoplay: true,
         autoplaySpeed: 2000,
         infinite: true,
-        dots: true,
+        dots: false,
         variableWidth: true
     });
     function getAuditReport() {
