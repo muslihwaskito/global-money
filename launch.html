@@ -1,46 +1,92 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<meta charset="utf-8" />
-		<title>Coming Soon to a Browser Near You</title>		
-		<link rel="stylesheet" type="text/css" href="style.css" />
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
 		
-		<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js'></script>
-		<script type='text/javascript' src='javascripts/jquery.tipsy.js'></script>
-		<script type='text/javascript'>
-		$(function() {
-			$('#tipsy').tipsy({fade: true, gravity: 's'});
-		});
-		</script>
-		<!--[if IE]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<title>Global Money</title>
+
+		<!-- Loading third party fonts -->
+		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link rel="icon" type="image/x-icon" href="_nuxt/img/logo_svg.svg">
+
+		<!-- Loading main css file -->
+		<link rel="stylesheet" href="style.css">
+		
+		<!--[if lt IE 9]>
+		<script src="js/ie-support/html5.js"></script>
+		<script src="js/ie-support/respond.js"></script>
 		<![endif]-->
-		
-	<script async src='/cdn-cgi/bm/cv/669835187/api.js'></script></head>
+
+	</head>
+
+
 	<body>
-		<div class="wrapper">
-			<img src="images/logo.png" alt="YourLogo" title="YourLogo"/>
-			<div class="hr"></div>
-			<h1>Coming Soon to a Browser Near You</h1>
-			<p>Unfortunately, we’re not quite ready yet. <strong> But, you can see our progress below:</strong></p>
-						
-			<section class="progress">
-				<div class="progress-bar-container" id="tipsy" title="87% Complete"> <!-- Edit this title for the tooltip pop up -->
-					<article class="progress-bar" style="width:87%"  ></article> <!-- Edit the width percentage value to indicate progress -->
-				</div>
-				<article class="txt-launch-day-hat"></article>
-			</section>
+		
+		<div class="site-content">
 			
-			<div class="hr"></div>
-			<section class="mailing-list">
-				<h2>Want to be the first to know when we're ready?</h2>
-				<form>
-					<input type="text" value="your@email.com" onfocus="if(!this._haschanged){this.value=''};this._haschanged=true;">
-					<input type="submit" value="Subscribe">	
-				</form>
-			</section><div class="clear"></div>
-			<div class="hr"></div>
+			<header class="site-header">
+				<div class="container shrinked">
+					<a href="/index.html" class="button">About Us</a>
+                    <a href="/index.html"><img src="_nuxt/img/logo_svg.svg" alt="Global Money" style="max-width: 150px;"></a>
+					<a href="#" class="button">Contact</a>
+				</div>	<!-- .container -->
+			</header> <!-- .site-header -->
+
+			<main class="main-content">
+				<div class="container shrinked">
+					<h1 class="section-title center-aligned">We are preparing something new. <br> <span>Stay tuned!</span></h1>
+
+					<div class="counter-wrap" data-date-target="Feb 01, 2022 00:00:00">
+						<div class="counter days">
+							<div class="number">78</div>
+							<div class="caption">Days</div>
+						</div>
+						<div class="counter hours">
+							<div class="number">24</div>
+							<div class="caption">Hours</div>
+						</div>
+						<div class="counter minutes">
+							<div class="number">43</div>
+							<div class="caption">Minutes</div>
+						</div>
+						<div class="counter seconds">
+							<div class="number">38</div>
+							<div class="caption">Seconds</div>
+						</div>
+					</div>
+
+				</div>	<!-- .container -->
+			</main> <!-- .main-content -->
+
+			<footer class="site-footer">
+				<div class="container shrinked">
+					
+					<form action="#" class="subscribe-form">
+						<input type="text" placeholder="Enter your email to join our newsletter">
+						<i class="fa fa-envelope"></i>
+						<input type="submit" value="Subscribe!">
+					</form> <!-- .subscribe-form -->
+					
+					<div class="social-links">
+						<a href="#"><i class="fa fa-facebook"></i></a>
+						<a href="#"><i class="fa fa-google-plus"></i></a>
+						<a href="#"><i class="fa fa-twitter"></i></a>
+						<a href="#"><i class="fa fa-pinterest"></i></a>
+					</div> <!-- .social-links -->
+
+					<div class="colophon">Copyright 2022 Global Money. All right reserved</div>
+
+				</div>	<!-- .container -->
+			</footer> <!-- .site-footer -->
+
 		</div>
-	<script type="text/javascript">(function(){window['__CF$cv$params']={r:'6c824cf62c04879f',m:'fwE284sIx9CzCFFJDJdvXHWGrtpLJv6tC8UpOdnstqs-1641276593-0-AVnJUTbAPUaD0bwW8B3iTp5fG32JfFqkA5dy2M0D541I84YxhYoTFk9Nb0RMBoHxxOL46RBkurmND0ff1b/HV6g1Pl9yFD9TKLAXhIOovT1z/D9/CoRQhQWCjLo4t/gxv/BcKhXn2XA9Q9oJktdJX5I=',s:[0x06ec742103,0x3741d7f5fe],}})();</script></body>
+
+		<script src="js2/jquery-1.11.1.min.js"></script>
+		<script src="js2/plugins.js"></script>
+		<script src="js2/app.js"></script>
+		
+	</body>
+
 </html>
