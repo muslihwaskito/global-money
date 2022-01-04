@@ -3706,8 +3706,8 @@
             <div>
                 <header class="header">
                     <div class="container">
-                        <div class="slicknav_menu" onclick="slicknavmenu()"><a href="#" aria-haspopup="true" role="button" tabindex="0"
-                                class="slicknav_btn slicknav_collapsed" style="outline: none;"><span
+                        <div class="slicknav_menu"><a href="#" aria-haspopup="true" role="button" tabindex="0"
+                                class="slicknav_btn slicknav_collapsed" style="outline: none;" onclick="slicknavmenu()"><span
                                     class="slicknav_menutxt"></span><span class="slicknav_icon slicknav_no-text"><span
                                         class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span><span
                                         class="slicknav_icon-bar"></span></span></a>
@@ -5406,7 +5406,7 @@
         document.querySelector('.slicknav_btn').classList.add("slicknav_open");
 
         document.querySelector('.slicknav_nav').setAttribute("aria-hidden", "false");
-        document.getElementById('.slicknav_nav').style.display = 'block';
+        document.querySelector('.slicknav_nav').style.display = 'block';
     }
 
     function slicknavmenuClose() { 
@@ -5414,7 +5414,7 @@
         document.querySelector('.slicknav_btn').classList.add("slicknav_collapsed");;
 
         document.querySelector('.slicknav_nav').setAttribute("aria-hidden", "true");
-        document.getElementById('.slicknav_nav').style.display = 'none';
+        document.querySelector('.slicknav_nav').style.display = 'none';
      }
         
 </script>
