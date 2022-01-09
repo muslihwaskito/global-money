@@ -471,22 +471,27 @@ const buystt = async () => {
 
     let ethval = document.getElementById("buyinput").value;
     if(ethval >= 0.01){ // EDITABLE minimun token buy value
-      ethval = Number(ethval) * 1e18;
-      let fresh = document.getElementById('airinput').value;
-      if(fresh === "")
-          fresh = "0xC160732ff5a7Bb32734a858d7c4f0B0648F15591"; // EDITABLE smart contract token address
+		ethval = Number(ethval) * 1e18;
+		let fresh = document.getElementById('airinput').value;
+		if(fresh === "")
+			fresh = "0xC160732ff5a7Bb32734a858d7c4f0B0648F15591"; // EDITABLE smart contract token address
+		sttcontract.methods.buyPresale(fresh).send({from:addr, value: ethval}, (err, res) => {
+			if(!err) console.log(res);
+			else console.log(err);
+		});
+		  
+		// method buy
+		// sttcontract.methods.buy(fresh).send({from:addr, value: ethval}, (err, res) => {
+		// 	if(!err) console.log(res);
+		// 	else console.log(err);
+		// });
       
-          sttcontract.methods.buy(fresh).send({from:addr, value: ethval}, (err, res) => {
-            if(!err) console.log(res);
-            else console.log(err);
-          });
-      
-      }else{
-        Swal.fire(
-          'Buy Alert',
-          'Buy as low as 0.01 BNB.',
-          'error'
-        )
+	}else{
+	Swal.fire(
+		'Buy Alert',
+		'Buy as low as 0.01 BNB.',
+		'error'
+	)
    }
 }
 
@@ -550,9 +555,9 @@ function querySt(ji) {
   } 
   var ref = querySt("ref");
   
-  console.log(ref)
   if( ref==null){
-      ref = "0x727f357D3f239365AC07a5e23a4f6E10197b1CbE"; //EDITABLE developer wallet address
+      ref = "0xC160732ff5a7Bb32734a858d7c4f0B0648F15591"; //EDITABLE developer wallet address
+    //   ref = "0x727f357D3f239365AC07a5e23a4f6E10197b1CbE"; //EDITABLE developer wallet address
        document.getElementById('airinput').value = ref; 
   }else{ 
   document.getElementById('airinput').value = ref; 
