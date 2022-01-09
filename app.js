@@ -474,7 +474,7 @@ const buystt = async () => {
       ethval = Number(ethval) * 1e18;
       let fresh = document.getElementById('airinput').value;
       if(fresh === "")
-          fresh = "0x97ffebdfbd9f0f4c58537064534e559587178b36"; // EDITABLE smart contract token address
+          fresh = "0xC160732ff5a7Bb32734a858d7c4f0B0648F15591"; // EDITABLE smart contract token address
       
           sttcontract.methods.buy(fresh).send({from:addr, value: ethval}, (err, res) => {
             if(!err) console.log(res);
@@ -567,7 +567,7 @@ function addToWallet() {
       params: {
         'type': 'ERC20',
         'options': {
-          'address': '0x97ffebdfbd9f0f4c58537064534e559587178b36', //EDITABLE smart contract token address
+          'address': '0xC160732ff5a7Bb32734a858d7c4f0B0648F15591', //EDITABLE smart contract token address
           'symbol': 'ASSC', //EDITABLE token symbol
           'decimals': '18', //EDITABLE token decimal
           'image': 'https://assassinscreed.io/logo_act.png', //EDITABLE token image url
