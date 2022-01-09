@@ -1180,7 +1180,7 @@ form textarea {
       white-space: nowrap;
       padding: 50px 0; } }
 
-.logo {
+/* .logo {
   width: 170px;
   height: 170px;
   border-radius: 50%;
@@ -1212,7 +1212,11 @@ form textarea {
     box-shadow: inset 0 0 0 100px #61d8ba; }
   .logo a {
     display: block;
-    color: white; }
+    color: white; } */
+  .logo {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
 .section-title {
   font-size: 48px;

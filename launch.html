@@ -19,6 +19,11 @@
 		<script src="js/ie-support/respond.js"></script>
 		<![endif]-->
 
+        
+        <!-- Add the slick-theme.css if you want default styling -->
+        <script data-n-head="1" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
 	</head>
 
 
@@ -37,6 +42,17 @@
 			<main class="main-content">
 				<div class="container shrinked">
 					<h1 class="section-title center-aligned">We are preparing something new. <br> <span>Stay tuned!</span></h1>
+
+                    <div class="your-class">
+                        <div class="slide">
+                            <img src="_nuxt/img/new/APP_2.png"
+                                alt="App Login" class="logo">
+                        </div>
+                        <div class="slide">
+                            <img src="_nuxt/img/new/APP_1.png"
+                                alt="App Dashboard" class="logo">
+                        </div>
+                    </div>
 
 					<div class="counter-wrap" data-date-target="Feb 01, 2022 00:00:00">
 						<div class="counter days">
@@ -69,12 +85,12 @@
 						<input type="submit" value="Subscribe!">
 					</form> <!-- .subscribe-form -->
 					
-					<div class="social-links">
+					<!-- <div class="social-links">
 						<a href="#"><i class="fa fa-facebook"></i></a>
 						<a href="#"><i class="fa fa-google-plus"></i></a>
 						<a href="#"><i class="fa fa-twitter"></i></a>
 						<a href="#"><i class="fa fa-pinterest"></i></a>
-					</div> <!-- .social-links -->
+					</div> -->
 
 					<div class="colophon">Copyright 2022 Global Money. All right reserved</div>
 
@@ -83,10 +99,21 @@
 
 		</div>
 
-		<script src="js2/jquery-1.11.1.min.js"></script>
-		<script src="js2/plugins.js"></script>
-		<script src="js2/app.js"></script>
+		<!-- <script src="js2/jquery-1.11.1.min.js"></script> -->
+		<!-- <script src="js2/plugins.js"></script> -->
+		<!-- <script src="js2/app.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 		
 	</body>
+    <script>
+        
+    $('.your-class').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        infinite: true,
+        dots: false,
+    });
+    </script>
 
 </html>

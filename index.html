@@ -20,14 +20,16 @@
     </script>
     <script data-n-head="1" src="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.min.js">
     </script>
-    <script data-n-head="1" src="https://orion.money/main.js"></script>
-    <link rel="preload" href="https://orion.money/_nuxt/e9d5700.js" as="script">
-    <link rel="preload" href="https://orion.money/_nuxt/c0f8ed6.js" as="script">
-    <link rel="preload" href="https://orion.money/_nuxt/531ac7c.js" as="script">
-    <link rel="preload" href="https://orion.money/_nuxt/b6a4385.js" as="script">
+    <script data-n-head="1" src="main.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <style type="text/css">
+        .blue {
+            color: #0494e7 !important;
+        }
+        .yellow {
+            color: #ffee16 !important;
+        }
         .img-partner {
             max-height: 70px;
             width: auto !important;
@@ -2933,6 +2935,11 @@
                 background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNyIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDcgMTYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNyAxMUwzLjQ5OTk3IDE2TC00LjgwODI1ZS0wNyAxMUwyLjk5OTk3IDExTDIuOTk5OTcgLTEuNzQ4NDdlLTA3TDMuOTk5OTcgLTEuMzExMzZlLTA3TDMuOTk5OTcgMTFMNyAxMVoiIGZpbGw9IiMwMEJGNzIiLz4KPC9zdmc+Cg==) no-repeat
             }
 
+            .tabs-content .block .row:first-child:after,
+            .tabs-content .block .row li.no-after:after {
+                content: none;
+            }
+
             .tabs-content .block .row li {
                 display: block
             }
@@ -3184,9 +3191,6 @@
     </style>
     <link href="https://www.googletagmanager.com" rel="preconnect">
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-1FBBV49YJ6&amp;l=dataLayer"></script>
-    <script charset="utf-8" src="https://orion.money/_nuxt/8bb4b21.js"></script>
-    <script charset="utf-8" src="https://orion.money/_nuxt/d63710d.js"></script>
-    <script charset="utf-8" src="https://orion.money/_nuxt/8fc80b4.js"></script>
     <style type="text/css">
         .slick-track[data-v-e4caeaf8] {
             position: relative;
@@ -3533,7 +3537,7 @@
             line-height: 30px;
             text-align: center;
             color: #05a80f;
-            margin-right: 20px;
+            /* margin-right: 20px; */
             margin-bottom: 5px;
             margin-top: 10px;
         }
@@ -3765,68 +3769,36 @@
                                                 <h2>How much can I earn?</h2>
                                                 <form action="//app.orion.money">
                                                     <dl>
-                                                        <dt><select name="select" class="drop select2-hidden-accessible"
-                                                                data-select2-id="select2-data-1-derj" tabindex="-1"
-                                                                aria-hidden="true">
-                                                                <option value="1" data-select2-id="select2-data-3-glpp">
+                                                        <dt>
+                                                            <select name="select" class="js-example-basic-single" onchange="changeCoin(this)">
+                                                                <option value="1">
                                                                     USDT</option>
-                                                                <option value="2" data-select2-id="select2-data-4-7h5n">
+                                                                <option value="2">
                                                                     USDC</option>
-                                                                <option value="2" data-select2-id="select2-data-5-09kc">
+                                                                <option value="3">
                                                                     BUSD</option>
-                                                                <option value="3" data-select2-id="select2-data-6-axy5">
-                                                                    DAI</option>
-                                                                <option value="4" data-select2-id="select2-data-7-an9m">
-                                                                    UST</option>
-                                                            </select><span
-                                                                class="select2 select2-container select2-container--default"
-                                                                dir="ltr" data-select2-id="select2-data-2-ajf9"
-                                                                style="width: 24px;"><span class="selection"><span
-                                                                        class="select2-selection select2-selection--single"
-                                                                        role="combobox" aria-haspopup="true"
-                                                                        aria-expanded="false" tabindex="0"
-                                                                        aria-disabled="false"
-                                                                        aria-labelledby="select2-select-j0-container"
-                                                                        aria-controls="select2-select-j0-container"><span
-                                                                            class="select2-selection__rendered"
-                                                                            id="select2-select-j0-container"
-                                                                            role="textbox" aria-readonly="true"
-                                                                            title="USDT">USDT</span><span
-                                                                            class="select2-selection__arrow"
-                                                                            role="presentation"><b
-                                                                                role="presentation"></b></span></span></span><span
-                                                                    class="dropdown-wrapper"
-                                                                    aria-hidden="true"></span></span> <small>Your
-                                                                Stablecoin</small></dt>
+                                                            </select>
+                                                                
+                                                            <small>Your Stablecoin</small></dt>
                                                         <dd style="display: none;">
                                                             <p>$0.0</p> <small>USD Interest per year</small>
                                                         </dd>
                                                     </dl>
                                                     <dl>
-                                                        <dt><input id="summ" type="text" value="10000" class="summ">
+                                                        <dt><input id="summ" type="text" value="10000" class="summ" name="amount" onkeyup="changeAmount(this)">
                                                             <small>Amount</small></dt>
                                                         <dd id="interest_crypto">
                                                             <p><span class="symbol">USDT</span> <span
-                                                                    class="amount">2,000</span></p> <small>Interest
+                                                                    class="amount amount-interest">3,000</span></p> <small>Interest
                                                                 Earned</small>
                                                         </dd>
                                                     </dl>
                                                     <dl>
-                                                        <dt>
-                                                            <div class="holder"><input id="years" type="text"
-                                                                    readonly="readonly"><label for="years">Year</label>
-                                                            </div>
-                                                            <div id="slider-range-max"
-                                                                class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
-                                                                <div class="ui-slider-range ui-corner-all ui-widget-header ui-slider-range-max"
-                                                                    style="width: 100%;"></div><span tabindex="0"
-                                                                    class="ui-slider-handle ui-corner-all ui-state-default"
-                                                                    style="left: 0%;"></span>
-                                                            </div>
-                                                        </dt>
+                                                        <dt><input id="year" type="text" value="1" class="summ" name="year">
+                                                            <small>Years</small></dt>
                                                         <dd id="total">
                                                             <p><span class="symbol">USDT</span> <span
-                                                                    class="amount">12,000</span></p>
+                                                                    class="amount amount-total">13,000</span></p>
                                                             <small>Total</small>
                                                         </dd>
                                                     </dl>
@@ -3836,12 +3808,12 @@
                                                         </dd>
                                                         <dd id="interest_crypto">
                                                             <p><span class="symbol">USDT</span> <span
-                                                                    class="amount">2,000</span></p> <small>Interest
+                                                                    class="amount">3,000</span></p> <small>Interest
                                                                 Earned</small>
                                                         </dd>
                                                         <dd id="total">
                                                             <p><span class="symbol">USDT</span> <span
-                                                                    class="amount">12,000</span></p>
+                                                                    class="amount">13,000</span></p>
                                                             <small>Total</small>
                                                         </dd>
                                                     </div>
@@ -3923,35 +3895,31 @@
                                             <div class="block">
                                                 <ul class="row">
                                                     <li>
-                                                        <figure><img src="https://orion.money/img/ico-tabs-01.svg" alt="">
-                                                            <figcaption>You deposit <br>Global
-                                                                Money</figcaption>
+                                                        <figure><img src="_nuxt//img/new/people.svg" alt="" style="max-width: 150px; margin-left: 10px;">>
+                                                            <figcaption>People</figcaption>
                                                         </figure>
                                                     </li>
                                                     <li>
-                                                        <figure><img src="https://orion.money/img/ico-tabs-02.svg" alt="">
-                                                            <figcaption>You earn<br> up to 30% with<br>Stablecoins
-                                                            </figcaption>
+                                                        <figure><img src="_nuxt//img/logo_svg.svg" alt="" style="max-width: 40px;">>
+                                                            <figcaption>Global Money</figcaption>
+                                                        </figure>
+                                                    </li>
+                                                    <li>
+                                                        <figure><img src="_nuxt/img/new/candle.svg">
+                                                            <figcaption>You earn<br> up to 30% with<br>Stablecoins</figcaption>
                                                         </figure>
                                                     </li>
                                                 </ul>
                                                 <ul class="row">
                                                     <li>
-                                                        <figure><img src="https://orion.money/img/ico-tabs-03.svg" alt="">
-                                                            <figcaption>Global Money<br> deposits stablecoins<br> with
-                                                                EthAnchor</figcaption>
-                                                        </figure>
-                                                    </li>
-                                                    <li>
-                                                        <figure><img src="https://orion.money/img/ico-tabs-04.svg" alt="">
-                                                            <figcaption>EthAnchor<br> converts stablecoins<br> to UST
+                                                        <figure><img src="_nuxt/img/new/trolly.png" alt="" style="max-width: 150px;">>
+                                                            <figcaption>Purcase of Goods
                                                             </figcaption>
                                                         </figure>
                                                     </li>
                                                     <li>
-                                                        <figure><img src="https://orion.money/img/ico-tabs-05.svg" alt="">
-                                                            <figcaption>EthAnchor<br> deposits UST to Anchor<br> on
-                                                                Terra</figcaption>
+                                                        <figure><img src="_nuxt/img/new/nft.png" alt="" style="max-width: 150px;">>
+                                                            <figcaption>NFT</figcaption>
                                                         </figure>
                                                     </li>
                                                 </ul>
@@ -3964,37 +3932,25 @@
                                             <div class="block">
                                                 <ul class="row">
                                                     <li>
-                                                        <figure><img src="https://orion.money/img/ico-tabs-01.svg" alt="">
+                                                        <figure><img src="_nuxt//img/new/wd fund 1.svg" alt="" style="max-width: 150px;">
                                                             <figcaption>You withdraw your<br> stablecoins from<br>Global
                                                                 Money</figcaption>
                                                         </figure>
                                                     </li>
-                                                    <li>
-                                                        <figure><img src="https://orion.money/img/ico-tabs-06.svg" alt="">
+                                                    <li class="no-after">
+                                                        <figure><img src="_nuxt//img/new/wd fund 2.svg" alt="" style="max-width: 150px;">
                                                             <figcaption>Global Money<br>sends you your <br>stablecoins
                                                             </figcaption>
                                                         </figure>
                                                     </li>
                                                 </ul>
                                                 <ul class="row">
-                                                    <li>
+                                                    <!-- <li>
                                                         <figure><img src="https://orion.money/img/ico-tabs-07.svg" alt="">
                                                             <figcaption>Global Money<br>requests withdrawal<br>from
                                                                 EthAnchor</figcaption>
                                                         </figure>
-                                                    </li>
-                                                    <li>
-                                                        <figure><img src="https://orion.money/img/ico-tabs-08.svg" alt="">
-                                                            <figcaption>EthAnchor withdraws <br>UST from Anchor <br>on
-                                                                Terra</figcaption>
-                                                        </figure>
-                                                    </li>
-                                                    <li>
-                                                        <figure><img src="https://orion.money/img/ico-tabs-04.svg" alt="">
-                                                            <figcaption>EthAnchor converts<br> UST to stablecoins and
-                                                                sends <br>to Global Money</figcaption>
-                                                        </figure>
-                                                    </li>
+                                                    </li> -->
                                                 </ul>
                                             </div>
                                         </div>
@@ -4012,33 +3968,33 @@
                                                 <p>&nbsp;</p>
                                             </li>
                                             <li>
-                                                <figure><img src="_nuxt/img/world-bank-2.png" alt="">
-                                                    <figcaption>Earth</figcaption>
+                                                <figure><img src="_nuxt/img/new/bank 1.svg" alt="" style="max-width: 150px;" >
+                                                    <figure>&nbsp;</figure>
                                                 </figure>
                                             </li>
                                             <li>
-                                                <figure><img src="https://orion.money/img/ico-station.svg" alt="">
-                                                    <figcaption>Station</figcaption>
+                                                <figure><img src="_nuxt/img/new/bank 2.svg" alt="" style="max-width: 150px;" >
+                                                    <figure>&nbsp;</figure>
                                                 </figure>
                                             </li>
                                             <li>
-                                                <figure><img src="https://orion.money/img/ico-moon.svg" alt="">
-                                                    <figcaption>Moon</figcaption>
+                                                <figure><img src="_nuxt/img/new/bank 3.svg" alt="" style="max-width: 150px;" >
+                                                    <figure>&nbsp;</figure>
                                                 </figure>
                                             </li>
                                         </ul>
                                         <ul>
                                             <li>
-                                                <p>Global Money %<br> in portfolio</p>
+                                                <p class="">Global Money %<br> in portfolio</p>
                                             </li>
                                             <li>
-                                                <p>0 to 10%</p>
+                                                <p class="blue">0 to 10%</p>
                                             </li>
                                             <li>
                                                 <p>10% to 20%</p>
                                             </li>
                                             <li>
-                                                <p>10% to 25%</p>
+                                                <p class="yellow">10% to 25%</p>
                                             </li>
                                         </ul>
                                         <ul>
@@ -4046,13 +4002,13 @@
                                                 <p>APY<br>in stablecoins</p>
                                             </li>
                                             <li>
-                                                <p><strong>20%</strong></p>
+                                                <p><strong class="blue">20%</strong></p>
                                             </li>
                                             <li>
                                                 <p><strong>25%</strong></p>
                                             </li>
                                             <li>
-                                                <p><strong>27%</strong></p>
+                                                <p><strong class="yellow">27%</strong></p>
                                             </li>
                                         </ul>
                                         <ul>
@@ -4060,13 +4016,13 @@
                                                 <p>APY in GLOBAL<br> tokens</p>
                                             </li>
                                             <li>
-                                                <p><strong>25%</strong></p>
+                                                <p><strong class="blue">25%</strong></p>
                                             </li>
                                             <li>
                                                 <p><strong>28%</strong></p>
                                             </li>
                                             <li>
-                                                <p><strong>30%</strong></p>
+                                                <p><strong class="yellow">30%</strong></p>
                                             </li>
                                         </ul>
                                     </div>
@@ -4077,9 +4033,9 @@
                                     Global Money token
                                 </h2>
                                 <div class="orion-token-section"><img
-                                        src="_nuxt/img/logo_svg.svg" class="orion-token" style="width: 200px;">
-                                    <img src="_nuxt/img/logo_svg.svg"
-                                        class="orion-token orion-token-mobile" style="width: 200px;">
+                                        src="_nuxt/img/new/global-net.png" class="orion-token">
+                                    <img src="_nuxt/img/new/global-net.png"
+                                        class="orion-token orion-token-mobile">
                                     <div class="orion-trade-blocks">
                                         <div class="orion-trade-block orion-trade-block-dex"><span
                                                 class="orion-token-trade">Trade Global Money on:</span> <embed
@@ -5292,45 +5248,10 @@
             }
         }
     </script>
-    <script src="https://orion.money/_nuxt/e9d5700.js"></script>
-    <script src="https://orion.money/_nuxt/c0f8ed6.js"></script>
-    <script src="https://orion.money/_nuxt/531ac7c.js"></script>
-    <!-- <script src="https://orion.money/_nuxt/b6a4385.js"></script> -->
 
     <iframe id="intercom-frame"
         style="position: absolute !important; opacity: 0 !important; width: 1px !important; height: 1px !important; top: 0 !important; left: 0 !important; border: none !important; display: block !important; z-index: -1 !important; pointer-events: none;"
         aria-hidden="true" tabindex="-1" title="Intercom"></iframe>
-    <!-- <span class="select2-container select2-container--default select2-container--open"
-        style="position: absolute; top: 348px; left: 1476px;"><span class="select2-dropdown select2-dropdown--below"
-            dir="ltr" style="width: 240px;"><span class="select2-search select2-search--dropdown"><input
-                    class="select2-search__field" type="search" tabindex="0" autocorrect="off" autocapitalize="none"
-                    spellcheck="false" role="searchbox" aria-autocomplete="list" autocomplete="off" aria-label="Search"
-                    aria-controls="select2-select-kn-results"
-                    aria-activedescendant="select2-select-kn-result-cqk9-2"></span><span class="select2-results">
-                <ul class="select2-results__options" role="listbox" id="select2-select-kn-results" aria-expanded="true"
-                    aria-hidden="false">
-                    <li class="select2-results__option select2-results__option--selectable select2-results__option--selected"
-                        id="select2-select-kn-result-zq3x-1" role="option"
-                        data-select2-id="select2-data-select2-select-kn-result-zq3x-1" aria-selected="false">
-                        <span>Tether</span><span>USDT<span></span></span></li>
-                    <li class="select2-results__option select2-results__option--selectable select2-results__option--highlighted"
-                        id="select2-select-kn-result-cqk9-2" role="option"
-                        data-select2-id="select2-data-select2-select-kn-result-cqk9-2" aria-selected="false"><span>USD
-                            Coin</span><span>USDC<span></span></span></li>
-                    <li class="select2-results__option select2-results__option--selectable"
-                        id="select2-select-kn-result-ugc1-2" role="option"
-                        data-select2-id="select2-data-select2-select-kn-result-ugc1-2" aria-selected="false">
-                        <span>Binance USD</span><span>BUSD<span></span></span></li>
-                    <li class="select2-results__option select2-results__option--selectable"
-                        id="select2-select-kn-result-kk7s-3" role="option"
-                        data-select2-id="select2-data-select2-select-kn-result-kk7s-3" aria-selected="false">
-                        <span>DAI</span><span>DAI<span></span></span></li>
-                    <li class="select2-results__option select2-results__option--selectable"
-                        id="select2-select-kn-result-romo-4" role="option"
-                        data-select2-id="select2-data-select2-select-kn-result-romo-4" aria-selected="false">
-                        <span>UST</span><span>UST<span></span></span></li>
-                </ul>
-            </span></span></span> -->
     <!-- <div id="intercom-container" class="intercom-namespace">
         <style>
             html.intercom-mobile-messenger-active,
@@ -5382,6 +5303,9 @@
 </body>
 
 <script>
+    $(document).ready(function() {
+        $('.js-example-basic-single').select2();
+    });
     function deposit(){
         document.getElementById('withdraw').classList.remove("ui-tabs-active");
         document.getElementById('withdraw').classList.remove("ui-state-active")
@@ -5437,6 +5361,33 @@
 
         document.querySelector('.slicknav_nav').setAttribute("aria-hidden", "true");
         document.querySelector('.slicknav_nav').style.display = 'none';
+    }
+    function changeCoin() {
+        var value_select = document.querySelector("select[name=select]").value;
+        var data = document.querySelectorAll('.symbol');
+        var money = 'USDT';
+        switch (value_select) {
+            case '2':
+                console.log('masuk sini')
+                money = 'USDC';
+                break;
+            case '3':
+                money = 'BUSD';
+                break;
+            default:
+            money = 'USDT';
+                break;
+        }
+        data.forEach(e => {
+            e.innerHTML  = money;
+        });
+    }
+    function changeAmount() { 
+        var amount = document.querySelector("input[name=amount]").value;
+
+        var interest = parseInt(amount) * 30 / 100;
+        document.querySelector('.amount-interest').innerHTML = interest.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        document.querySelector('.amount-total').innerHTML = (parseInt(amount) + interest).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
      }
         
 </script>
