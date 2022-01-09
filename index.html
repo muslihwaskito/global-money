@@ -3807,12 +3807,12 @@
                                                         </dd>
                                                         <dd id="interest_crypto">
                                                             <p><span class="symbol">USDT</span> <span
-                                                                    class="amount">3,000</span></p> <small>Interest
+                                                                    class="amount amount-interest-mobile">3,000</span></p> <small>Interest
                                                                 Earned</small>
                                                         </dd>
                                                         <dd id="total">
                                                             <p><span class="symbol">USDT</span> <span
-                                                                    class="amount">13,000</span></p>
+                                                                    class="amount amount-total-mobile">13,000</span></p>
                                                             <small>Total</small>
                                                         </dd>
                                                     </div>
@@ -4732,7 +4732,9 @@
 
         var interest = parseInt(amount) * 30 / 100;
         document.querySelector('.amount-interest').innerHTML = interest.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        document.querySelector('.amount-interest-mobile').innerHTML = interest.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
         document.querySelector('.amount-total').innerHTML = (parseInt(amount) + interest).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        document.querySelector('.amount-total-mobile').innerHTML = (parseInt(amount) + interest).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
      }
         
 </script>
