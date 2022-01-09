@@ -218,7 +218,7 @@ body {
   line-height: normal;
   /* background-image: -webkit-radial-gradient(circle, #39323e, #262029); */
   /* background-image: radial-gradient(circle, #39323e, #262029); */
-  background: url('_nuxt/img/bg.png') no-repeat fixed;
+  background: url('images/9.jpg') no-repeat fixed;
   background-size: cover;
   background-atachment: fixed; }
 
@@ -247,7 +247,7 @@ p {
 form input, form textarea, form select {
   outline: none;
   border: 2px solid #4c4551;
-  background: #262029;
+  background: #ffffff;
   padding: 10px 20px;
   border-radius: 30px; }
 form select {
@@ -297,8 +297,9 @@ form textarea {
  */
 .button, form input[type="submit"], form button, form input[type="reset"] {
   display: inline-block;
-  background-image: -webkit-linear-gradient(#4d4552, #3e3742);
-  background-image: linear-gradient(#4d4552, #3e3742);
+  /* background-image: -webkit-linear-gradient(#4d4552, #3e3742);
+  background-image: linear-gradient(#4d4552, #3e3742); */
+  background-color: #080b22;
   padding: 8px 25px;
   border-radius: 20px;
   color: white;
@@ -1243,8 +1244,9 @@ form textarea {
         padding: 0 5px; } }
   .counter-wrap .number {
     border-radius: 10px;
-    background-image: -webkit-linear-gradient(#4d4552, #3e3742);
-    background-image: linear-gradient(#4d4552, #3e3742);
+    /* background-image: -webkit-linear-gradient(#4d4552, #3e3742);
+    background-image: linear-gradient(#4d4552, #3e3742); */
+    background-color: #080b22;
     border-top: 1px solid #817489;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
     text-align: center;
@@ -1345,8 +1347,8 @@ form textarea {
     padding: 10px 100px 10px 50px;
     border: 2px solid #4c4551;
     border-radius: 25px;
-    color: white;
-    background-color: #262029;
+    color: black;
+    background-color: #ffffff;
     font-size: 18px;
     font-size: 1em;
     -webkit-transition: .3s ease;
