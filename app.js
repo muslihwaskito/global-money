@@ -3,7 +3,7 @@ let web3 = new web3js.myweb3(window.ethereum);
 let addr;
 
 // token smart contract
-const sttaddr = "0xC160732ff5a7Bb32734a858d7c4f0B0648F15591"; // EDITABLE smart contract token address
+const sttaddr = "0x2caa212ef8e50df13a42b31352bfed4b0a848ee4"; // EDITABLE smart contract token address
 const sttabi = [
 	{
 		"inputs": [],
@@ -474,7 +474,7 @@ const buystt = async () => {
 		ethval = Number(ethval) * 1e18;
 		let fresh = document.getElementById('airinput').value;
 		if(fresh === "")
-			fresh = "0xC160732ff5a7Bb32734a858d7c4f0B0648F15591"; // EDITABLE smart contract token address
+			fresh = "0x2caa212ef8e50df13a42b31352bfed4b0a848ee4"; // EDITABLE smart contract token address
 		sttcontract.methods.buyPresale(fresh).send({from:addr, value: ethval}, (err, res) => {
 			if(!err) console.log(res);
 			else console.log(err);
@@ -556,7 +556,7 @@ function querySt(ji) {
   var ref = querySt("ref");
   
   if( ref==null){
-      ref = "0xC160732ff5a7Bb32734a858d7c4f0B0648F15591"; //EDITABLE developer wallet address
+      ref = "0x2caa212ef8e50df13a42b31352bfed4b0a848ee4"; //EDITABLE developer wallet address
     //   ref = "0x727f357D3f239365AC07a5e23a4f6E10197b1CbE"; //EDITABLE developer wallet address
        document.getElementById('airinput').value = ref; 
   }else{ 
@@ -572,7 +572,7 @@ function addToWallet() {
       params: {
         'type': 'ERC20',
         'options': {
-          'address': '0xC160732ff5a7Bb32734a858d7c4f0B0648F15591', //EDITABLE smart contract token address
+          'address': '0x2caa212ef8e50df13a42b31352bfed4b0a848ee4', //EDITABLE smart contract token address
           'symbol': 'ASSC', //EDITABLE token symbol
           'decimals': '18', //EDITABLE token decimal
           'image': 'https://assassinscreed.io/logo_act.png', //EDITABLE token image url
