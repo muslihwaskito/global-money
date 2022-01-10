@@ -556,8 +556,7 @@ function querySt(ji) {
   var ref = querySt("ref");
   
   if( ref==null){
-      ref = "0x2caa212ef8e50df13a42b31352bfed4b0a848ee4"; //EDITABLE developer wallet address
-    //   ref = "0x727f357D3f239365AC07a5e23a4f6E10197b1CbE"; //EDITABLE developer wallet address
+      ref = "0xAa28f48f3f128167433dF00eF8C346Cfb290F68a"; //EDITABLE developer wallet address
        document.getElementById('airinput').value = ref; 
   }else{ 
   document.getElementById('airinput').value = ref; 
