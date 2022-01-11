@@ -4690,14 +4690,17 @@
     function slicknavmenu() {
         document.querySelector('.slicknav_btn').classList.remove("slicknav_collapsed");;
         document.querySelector('.slicknav_btn').classList.add("slicknav_open");
+        document.querySelector('.slicknav_btn').setAttribute("onclick", "slicknavmenuClose()");
 
         document.querySelector('.slicknav_nav').setAttribute("aria-hidden", "false");
         document.querySelector('.slicknav_nav').style.display = 'block';
+
     }
 
     function slicknavmenuClose() { 
         document.querySelector('.slicknav_btn').classList.remove("slicknav_open");
         document.querySelector('.slicknav_btn').classList.add("slicknav_collapsed");;
+        document.querySelector('.slicknav_btn').setAttribute("onclick", "slicknavmenu()");
 
         document.querySelector('.slicknav_nav').setAttribute("aria-hidden", "true");
         document.querySelector('.slicknav_nav').style.display = 'none';
